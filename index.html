@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>蜂王浆.cn · 全国蜂王浆品牌与商家黄页</title>
+<meta name="description" content="蜂王浆.cn 是蜂王浆行业信息黄页，收录全国蜂王浆品牌、蜂场与商家名录，提供蜂王浆选购指南、食用方法与保存方法等知识。品牌免费收录，联系邮箱 mfujun@agent.qq.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='32,4 55,17 55,47 32,60 9,47 9,17' fill='%23B07B2E'/%3E%3Cpolygon points='32,16 46,24 46,40 32,48 18,40 18,24' fill='%23F4EBD9'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23D9A441'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7EE;
+  --bg-2:#F3EAD6;
+  --card:#FFFFFF;
+  --ink:#2A1F11;
+  --muted:#7C6B52;
+  --amber:#B07B2E;
+  --amber-2:#D9A441;
+  --amber-deep:#8A5A22;
+  --dark:#231A0D;
+  --dark-2:#32250F;
+  --line:rgba(138,98,36,.20);
+  --ok:#3E7C4F;
+  --danger:#A03A2E;
+  --shadow:0 10px 30px rgba(90,62,18,.10);
+  --r:14px;
+  --maxw:1180px;
+  --serif:"Noto Serif SC",serif;
+  --sans:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+@media(max-width:480px){.wrap{padding:0 16px}}
+
+/* ===== 顶部导航 ===== */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(251,247,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:var(--maxw);margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:900;font-size:20px;color:var(--ink)}
+.logo svg{width:26px;height:26px;flex:none}
+.logo .dot{color:var(--amber)}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{padding:8px 14px;border-radius:10px;font-size:14.5px;font-weight:500;color:var(--muted);transition:.18s}
+.nav a:hover{background:var(--bg-2);color:var(--ink)}
+.nav a.on{background:var(--ink);color:#F6EBCF;font-weight:600}
+.top-mail{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:10px;background:var(--amber);color:#FFF7E6;font-size:13.5px;font-weight:600;white-space:nowrap}
+.top-mail svg{width:15px;height:15px}
+@media(max-width:760px){
+  .nav a{padding:6px 9px;font-size:13.5px}
+  .top-mail .txt{display:none}
+  .top-mail{padding:9px 11px}
+  .topbar-in{gap:8px}
+}
+
+/* ===== 视图切换 ===== */
+.view{display:none}
+.view.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.view.active{animation:fadeUp .35s ease both}
+
+/* ===== Hero ===== */
+.hero{background:radial-gradient(1200px 500px at 85% -10%,#5C4217 0%,transparent 55%),linear-gradient(160deg,var(--dark) 0%,#2C200C 70%,#3A2A10 100%);color:#F6EBCF;overflow:hidden}
+.hero-in{max-width:var(--maxw);margin:0 auto;padding:64px 20px 56px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.14em;color:var(--amber-2);font-weight:600}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--amber-2)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(38px,6vw,60px);line-height:1.15;margin:14px 0 10px;letter-spacing:.01em}
+.hero h1 .cn{color:var(--amber-2)}
+.hero-sub{font-size:16.5px;color:#D9C9A4;max-width:44em;margin-bottom:26px}
+.searchbox{display:flex;gap:10px;max-width:560px;background:#FDF9EF;border:1px solid rgba(217,164,65,.35);border-radius:14px;padding:7px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.searchbox input{flex:1;min-width:0;border:none;outline:none;background:transparent;font-family:inherit;font-size:16px;color:var(--ink);padding:9px 12px}
+.searchbox input::placeholder{color:#A2917A}
+.searchbox button{display:inline-flex;align-items:center;gap:7px;border:none;background:var(--amber);color:#FFF7E6;font-size:15px;font-weight:600;padding:10px 22px;border-radius:9px;white-space:nowrap}
+.searchbox button:hover{background:var(--amber-deep)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-size:13px;color:#C9B98F}
+.hero-tags span{background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.28);padding:3px 11px;border-radius:99px;cursor:pointer;transition:.15s}
+.hero-tags span:hover{background:rgba(217,164,65,.28)}
+.hero-fig{position:relative}
+.hero-fig img{width:100%;height:100%;object-fit:cover;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.45);border:1px solid rgba(217,164,65,.25)}
+.hero-fig::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+@media(max-width:820px){
+  .hero-in{grid-template-columns:1fr;padding:44px 16px 40px;gap:30px}
+  .hero-fig{max-width:460px}
+}
+.stats{background:var(--bg-2);border-top:1px solid var(--line)}
+.stats-in{max-width:var(--maxw);margin:0 auto;padding:22px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{text-align:center}
+.stat b{font-family:var(--serif);font-size:26px;color:var(--amber-deep);display:block;line-height:1.3}
+.stat i{font-style:normal;font-size:13px;color:var(--muted)}
+@media(max-width:480px){.stat b{font-size:21px}}
+
+/* ===== 区块通用 ===== */
+.sec{padding:64px 0}
+.sec-head{margin-bottom:34px;max-width:720px}
+.sec-head .kicker{font-size:12.5px;letter-spacing:.16em;color:var(--amber);font-weight:700;margin-bottom:8px}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(24px,3.2vw,34px);line-height:1.3}
+.sec-head p{margin-top:10px;color:var(--muted);font-size:15px}
+@media(max-width:480px){.sec{padding:46px 0}}
+
+/* 分类入口三卡 */
+.entries{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.entry{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.2s;position:relative;overflow:hidden}
+.entry:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(176,123,46,.5)}
+.entry .ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--bg-2);color:var(--amber-deep);margin-bottom:14px}
+.entry .ico svg{width:22px;height:22px}
+.entry h3{font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:6px}
+.entry p{font-size:13.5px;color:var(--muted)}
+.entry .go{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--amber)}
+.entry .go svg{width:14px;height:14px;transition:.15s}
+.entry:hover .go svg{transform:translateX(3px)}
+@media(max-width:760px){.entries{grid-template-columns:1fr}}
+
+/* 品牌卡片 */
+.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.brand-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+.brand-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(176,123,46,.5)}
+.brand-card .pic{aspect-ratio:4/3;background:var(--bg-2);overflow:hidden}
+.brand-card .pic img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.brand-card:hover .pic img{transform:scale(1.05)}
+.brand-card .noimg{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:linear-gradient(150deg,#F3EAD6,#EAD9B4);color:var(--amber-deep)}
+.brand-card .noimg .nm{font-family:var(--serif);font-weight:900;font-size:30px}
+.brand-card .noimg .tg{font-size:12px;letter-spacing:.2em;color:var(--amber)}
+.brand-card .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.brand-card .row1{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.brand-card h3{font-family:var(--serif);font-size:19px;font-weight:900}
+.brand-card .tag{font-size:11.5px;font-weight:600;color:var(--amber-deep);background:var(--bg-2);border:1px solid var(--line);padding:2px 9px;border-radius:99px}
+.brand-card .region{display:flex;align-items:center;gap:5px;font-size:12.5px;color:var(--muted);margin:7px 0 4px}
+.brand-card .region svg{width:13px;height:13px;color:var(--amber);flex:none}
+.brand-card p{font-size:13.5px;color:var(--muted);flex:1}
+.brand-card .foot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.brand-card .foot a{font-size:13px;font-weight:600;color:var(--amber);display:inline-flex;align-items:center;gap:5px}
+.brand-card .foot a svg{width:13px;height:13px}
+.brand-card .foot .src{font-size:11.5px;color:#A2937C}
+@media(max-width:900px){.brand-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.brand-grid{grid-template-columns:1fr}}
+
+/* 科普卡 */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.about-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.about-item .ico{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:var(--bg-2);color:var(--amber-deep);margin-bottom:12px}
+.about-item .ico svg{width:20px;height:20px}
+.about-item h3{font-family:var(--serif);font-size:17px;font-weight:700;margin-bottom:6px}
+.about-item p{font-size:13.5px;color:var(--muted)}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+
+/* CTA 条 */
+.cta{background:linear-gradient(135deg,var(--dark) 0%,#3A2A10 100%);color:#F6EBCF;border-radius:20px;padding:38px 40px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.cta h3{font-family:var(--serif);font-size:22px;font-weight:900}
+.cta p{color:#D9C9A4;font-size:14px;margin-top:5px}
+.cta .mailbtn{display:inline-flex;align-items:center;gap:9px;background:var(--amber-2);color:#2A1F11;font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:12px}
+.cta .mailbtn svg{width:16px;height:16px}
+.cta .mailbtn:hover{background:#E8BC62}
+@media(max-width:600px){.cta{padding:28px 22px}}
+
+/* ===== 品牌黄页页 ===== */
+.page-hero{background:linear-gradient(160deg,var(--dark) 0%,#33260F 100%);color:#F6EBCF;padding:52px 0 46px}
+.page-hero .kicker{font-size:12.5px;letter-spacing:.16em;color:var(--amber-2);font-weight:700;margin-bottom:10px}
+.page-hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(26px,4vw,40px);line-height:1.25}
+.page-hero p{color:#D9C9A4;margin-top:10px;max-width:640px;font-size:15px}
+.filters{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.filters .fsearch{flex:1;min-width:240px;display:flex;align-items:center;gap:8px;background:#FDF9EF;border-radius:11px;padding:0 14px}
+.filters .fsearch svg{width:17px;height:17px;color:#A2917A;flex:none}
+.filters .fsearch input{flex:1;min-width:0;border:none;outline:none;background:transparent;font-family:inherit;font-size:16px;color:var(--ink);padding:11px 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:rgba(217,164,65,.10);border:1px solid rgba(217,164,65,.3);color:#E2D2A4;font-size:13px;padding:7px 15px;border-radius:99px;transition:.15s}
+.chip.on{background:var(--amber-2);border-color:var(--amber-2);color:#2A1F11;font-weight:600}
+@media(max-width:560px){.filters{flex-direction:column}}
+.brand-note{display:flex;gap:10px;align-items:flex-start;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:13px 16px;font-size:13px;color:var(--muted);margin-bottom:22px}
+.brand-note svg{width:17px;height:17px;flex:none;margin-top:2px;color:var(--amber)}
+.empty{text-align:center;padding:60px 0;color:var(--muted)}
+.empty b{display:block;font-family:var(--serif);font-size:20px;color:var(--ink);margin-bottom:6px}
+
+/* ===== 知识科普页 ===== */
+.def{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;margin-bottom:46px}
+.def h3{font-family:var(--serif);font-size:21px;font-weight:900;margin-bottom:10px}
+.def p{font-size:14.5px;color:var(--muted)}
+.def .rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.def .rel span{font-size:12.5px;font-weight:600;color:var(--amber-deep);background:var(--bg-2);border:1px solid var(--line);padding:4px 12px;border-radius:99px}
+.def-fig{background:linear-gradient(150deg,#F3EAD6,#E8D5AE);border-radius:16px;padding:26px;display:flex;align-items:center;justify-content:center}
+.def-fig svg{width:100%;max-width:220px;height:auto;color:var(--amber-deep)}
+@media(max-width:760px){.def{grid-template-columns:1fr;padding:24px}}
+.sec-sub{margin:-30px 0 30px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.kcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.kcard h3{font-family:var(--serif);font-size:18px;font-weight:900;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.kcard h3 .ico{width:34px;height:34px;border-radius:10px;background:var(--bg-2);color:var(--amber-deep);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.kcard h3 .ico svg{width:17px;height:17px}
+.klist{list-style:none}
+.klist li{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.klist li:last-child{border-bottom:none}
+.klist .k{font-weight:600;flex:none;color:var(--ink)}
+.klist .v{color:var(--muted)}
+.klist li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber-2);margin-top:9px;flex:none}
+.nutri{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:46px}
+.nutri .n{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 10px;text-align:center}
+.nutri .n b{display:block;font-family:var(--serif);font-size:16px;color:var(--amber-deep);line-height:1.4}
+.nutri .n i{font-style:normal;font-size:12px;color:var(--muted)}
+.nutri .n .ico{width:36px;height:36px;margin:0 auto 8px;border-radius:10px;background:var(--bg-2);color:var(--amber-deep);display:flex;align-items:center;justify-content:center}
+.nutri .n .ico svg{width:18px;height:18px}
+@media(max-width:900px){.nutri{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.nutri{grid-template-columns:repeat(2,1fr)}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:46px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;position:relative}
+.step .no{font-family:var(--serif);font-weight:900;font-size:30px;color:var(--bg-2);line-height:1;margin-bottom:12px;text-shadow:0 0 0 transparent}
+.step .no i{font-style:normal;color:var(--amber);font-size:26px}
+.step h4{font-family:var(--serif);font-size:16px;font-weight:900;margin-bottom:6px}
+.step p{font-size:13px;color:var(--muted)}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+.warn{display:flex;gap:14px;background:#FBF0E4;border:1px solid #E3C49A;border-radius:14px;padding:18px 20px;margin-top:30px}
+.warn svg{width:20px;height:20px;color:var(--danger);flex:none;margin-top:2px}
+.warn b{display:block;font-family:var(--serif);font-size:15px;margin-bottom:4px;color:#7C3A2E}
+.warn p{font-size:13.5px;color:#8A6A4C}
+.disc{font-size:12px;color:#A2937C;margin-top:26px;line-height:1.8}
+
+/* ===== 入驻页 ===== */
+.join-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:44px 40px;text-align:center;max-width:760px;margin:0 auto 40px}
+.join-card .ico{width:64px;height:64px;border-radius:18px;background:var(--bg-2);color:var(--amber-deep);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.join-card .ico svg{width:32px;height:32px}
+.join-card h2{font-family:var(--serif);font-size:clamp(22px,3vw,30px);font-weight:900;margin-bottom:10px}
+.join-card p{color:var(--muted);font-size:14.5px;max-width:520px;margin:0 auto 26px}
+.mailbox{display:flex;align-items:center;gap:12px;justify-content:center;background:var(--bg);border:1.5px dashed var(--amber);border-radius:14px;padding:18px 22px;max-width:520px;margin:0 auto}
+.mailbox .mail{font-family:var(--serif);font-weight:900;font-size:clamp(17px,2.6vw,22px);color:var(--amber-deep);letter-spacing:.02em}
+.mailbox .act{display:flex;gap:8px}
+.mailbox button{border:none;border-radius:9px;font-size:13.5px;font-weight:600;padding:9px 15px;background:var(--amber);color:#FFF7E6}
+.mailbox button.ghost{background:transparent;border:1px solid var(--amber);color:var(--amber-deep)}
+.mailbox button:hover{background:var(--amber-deep);color:#FFF7E6}
+.mailbox button.ghost:hover{background:var(--bg-2)}
+@media(max-width:560px){.mailbox{flex-direction:column;gap:12px}.join-card{padding:30px 20px}}
+.join-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:44px}
+.join-step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.join-step .no{font-family:var(--serif);font-weight:900;font-size:32px;color:var(--amber);line-height:1}
+.join-step h4{font-family:var(--serif);font-size:17px;font-weight:900;margin:12px 0 6px}
+.join-step p{font-size:13.5px;color:var(--muted)}
+@media(max-width:760px){.join-steps{grid-template-columns:1fr}}
+.faq{max-width:760px;margin:0 auto}
+.faq h3{font-family:var(--serif);font-size:20px;font-weight:900;margin-bottom:18px}
+.faq-item{border:1px solid var(--line);border-radius:12px;background:var(--card);margin-bottom:10px;overflow:hidden}
+.faq-item summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;font-weight:600;font-size:14.5px;cursor:pointer}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .plus{font-family:var(--serif);font-size:20px;color:var(--amber);transition:.2s;line-height:1}
+.faq-item[open] summary .plus{transform:rotate(45deg)}
+.faq-item .ans{padding:0 18px 16px;font-size:13.5px;color:var(--muted)}
+
+/* ===== 页脚 ===== */
+.footer{background:var(--dark);color:#C9B98F;margin-top:20px}
+.footer-in{max-width:var(--maxw);margin:0 auto;padding:46px 20px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.footer h4{font-family:var(--serif);color:#F6EBCF;font-size:16px;font-weight:700;margin-bottom:14px}
+.footer a{display:block;font-size:13.5px;color:#B4A47E;padding:4px 0}
+.footer a:hover{color:var(--amber-2)}
+.footer .brand{font-family:var(--serif);font-weight:900;font-size:22px;color:#F6EBCF;margin-bottom:10px}
+.footer .brand .dot{color:var(--amber-2)}
+.footer .desc{font-size:13.5px;line-height:1.9}
+.footer .mail{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:var(--amber-2);font-weight:600;font-size:14px}
+.footer .mail svg{width:15px;height:15px}
+.footer .bottom{border-top:1px solid rgba(217,164,65,.18);margin-top:34px;padding-top:18px;font-size:12px;color:#8F8266;line-height:1.9}
+@media(max-width:760px){.footer-in{grid-template-columns:1fr 1fr;gap:24px}.footer .col:first-child{grid-column:1/-1}}
+
+/* 焦点可见 */
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="#home" data-nav="home" aria-label="蜂王浆.cn 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 55,17 55,47 32,60 9,47 9,17" fill="#B07B2E"/><polygon points="32,16 46,24 46,40 32,48 18,40 18,24" fill="#F4EBD9"/><circle cx="32" cy="32" r="7" fill="#D9A441"/></svg>
+      <span>蜂王浆<span class="dot">.cn</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#home" data-nav="home">首页</a>
+      <a href="#brands" data-nav="brands">品牌黄页</a>
+      <a href="#guide" data-nav="guide">知识科普</a>
+      <a href="#join" data-nav="join">商家入驻</a>
+    </nav>
+    <a class="top-mail" href="mailto:mfujun@agent.qq.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      <span class="txt">mfujun@agent.qq.com</span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== 视图：首页 ===== -->
+<section class="view" id="home">
+  <div class="hero">
+    <div class="hero-in">
+      <div>
+        <span class="eyebrow">FENGWANGJIANG.CN · 蜂王浆行业黄页</span>
+        <h1>蜂王浆<span class="cn">.cn</span></h1>
+        <p class="hero-sub">全国蜂王浆品牌、蜂场与商家信息一站查。收录品牌名录、产品资讯与选购知识，帮消费者找好货，帮商家找客源。</p>
+        <form class="searchbox" id="homeSearch" role="search">
+          <input type="search" id="homeSearchInput" placeholder="搜索品牌，如：百花、汪氏、冠生园…" aria-label="搜索蜂王浆品牌">
+          <button type="submit">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            搜索
+          </button>
+        </form>
+        <div class="hero-tags">
+          <span data-tag="百花">百花</span>
+          <span data-tag="汪氏">汪氏</span>
+          <span data-tag="冠生园">冠生园</span>
+          <span data-tag="北大荒">北大荒</span>
+          <span data-tag="老山">老山</span>
+        </div>
+      </div>
+      <figure class="hero-fig">
+        <img src="assets/hero-jelly.jpg" alt="新鲜蜂王浆，木勺舀起浓稠浆液" width="533" height="800">
+      </figure>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stats-in">
+      <div class="stat"><b>12+</b><i>收录品牌与厂商</i></div>
+      <div class="stat"><b>10+</b><i>覆盖全国主要产区</i></div>
+      <div class="stat"><b>免费</b><i>品牌与商家免费收录</i></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="wrap">
+      <div class="entries">
+        <a class="entry" href="#brands">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <h3>品牌黄页</h3>
+          <p>按品牌、产地、类型检索全国蜂王浆厂商，查看品牌档案与官方渠道。</p>
+          <span class="go">进入名录 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+        <a class="entry" href="#guide">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg></div>
+          <h3>知识科普</h3>
+          <p>蜂王浆是什么、怎么吃、怎么存、怎么选，一篇看懂，少花冤枉钱。</p>
+          <span class="go">阅读指南 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+        <a class="entry" href="#join">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg></div>
+          <h3>商家入驻</h3>
+          <p>品牌方、经销商、蜂场主，免费提交资料，让更多消费者找到你。</p>
+          <span class="go">申请收录 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">BRANDS</div>
+        <h2>热门品牌速览</h2>
+        <p>从百年老字号到产区新锐，先看看几个有代表性的蜂王浆品牌。完整名录见「品牌黄页」。</p>
+      </div>
+      <div class="brand-grid" id="homeBrands">
+        <article class="brand-card">
+          <div class="pic"><img src="assets/brand-baihua.jpg" alt="百花 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>百花</h3><span class="tag">中华老字号</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>北京</div>
+            <p>历史可追溯至清道光年间创办的永丰蜜店，集科研、生产、销售于一体的老牌蜂业企业。</p>
+            <div class="foot"><a href="https://www.baihua1919.cn" target="_blank" rel="noopener noreferrer">官方渠道 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a><span class="src">品牌官网</span></div>
+          </div>
+        </article>
+        <article class="brand-card">
+          <div class="pic"><img src="assets/brand-wangshi.jpg" alt="汪氏 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>汪氏</h3><span class="tag">知名品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>江西南昌</div>
+            <p>始于 1965 年的老牌蜂产品企业，曾首创连锁加盟模式，服务人口过亿。</p>
+            <div class="foot"><a href="http://www.wsbee.com" target="_blank" rel="noopener noreferrer">官方渠道 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a><span class="src">品牌官网</span></div>
+          </div>
+        </article>
+        <article class="brand-card">
+          <div class="pic"><img src="assets/brand-beidahuang.jpg" alt="北大荒 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>北大荒</h3><span class="tag">产区品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>黑龙江</div>
+            <p>依托黑土地优质蜜源的黑蜂蜂王浆，主打高蛋白、高活性。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+        <article class="brand-card">
+          <div class="pic"><img src="assets/brand-baoshengyuan.jpg" alt="宝生园 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>宝生园</h3><span class="tag">知名品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>广东广州</div>
+            <p>广州老牌蜂产品企业，鲜蜂王浆持有保健食品批文，渠道以华南为主。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+        <article class="brand-card">
+          <div class="pic"><img src="assets/brand-baoli.jpg" alt="宝利 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>宝利</h3><span class="tag">产区品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>吉林延边</div>
+            <p>延边宝利祥蜂业出品，立足长白山区蜜源，产品线覆盖鲜浆与冻干粉。</p>
+            <div class="foot"><a href="http://www.blx-bee.com" target="_blank" rel="noopener noreferrer">官方渠道 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a><span class="src">品牌官网</span></div>
+          </div>
+        </article>
+        <article class="brand-card">
+          <div class="pic"><img src="assets/brand-fengzhiyu.jpg" alt="蜂之语 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>蜂之语</h3><span class="tag">新锐品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>—</div>
+            <p>电商在售蜂王浆品牌，鲜浆小罐装，主打便捷与性价比。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+      </div>
+      <p style="margin-top:20px"><a href="#brands" style="font-weight:600;color:var(--amber)">查看全部品牌 →</a></p>
+    </div>
+  </div>
+
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">ABOUT</div>
+        <h2>为什么关注蜂王浆</h2>
+        <p>蜂王浆是工蜂咽下腺与上颚腺分泌的浆状物，是蜂王与蜜蜂幼虫的食物，被誉为「液体黄金」。</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-item">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.9 4.9 2.8 2.8"/><path d="m16.3 16.3 2.8 2.8"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.9 19.1 2.8-2.8"/><path d="m16.3 7.7 2.8-2.8"/></svg></div>
+          <h3>营养集中</h3>
+          <p>含王浆酸、蛋白质、氨基酸、维生素与微量元素等多种活性成分，成分天然。</p>
+        </div>
+        <div class="about-item">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>产地讲究</h3>
+          <p>秦岭、长白山、青海、黑龙江等产区气候各异，浆液活性与口感有差别。</p>
+        </div>
+        <div class="about-item">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div>
+          <h3>活性为王</h3>
+          <p>新鲜蜂王浆须冷链运输、低温冷冻保存，活性成分与新鲜度直接相关。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h3>你是蜂王浆品牌方或蜂场主？</h3>
+          <p>免费收录品牌信息，让全国采购商与消费者找到你。发邮件即可申请入驻。</p>
+        </div>
+        <a class="mailbtn" href="mailto:mfujun@agent.qq.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          mfujun@agent.qq.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 视图：品牌黄页 ===== -->
+<section class="view" id="brands">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="kicker">BRAND DIRECTORY</div>
+      <h1>蜂王浆品牌黄页</h1>
+      <p>收录全国蜂王浆品牌、蜂场与厂商名录。资料整理自品牌官网及公开网络信息，排名不分先后，仅供参考，请以官方信息为准。</p>
+      <div class="filters">
+        <label class="fsearch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="brandSearch" placeholder="输入品牌名或关键词…" aria-label="筛选品牌">
+        </label>
+        <div class="chips" id="brandChips" role="group" aria-label="按类型筛选"></div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="wrap">
+      <div class="brand-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span>站点为行业信息黄页，仅做品牌信息展示与索引，不销售产品、不代购、不提供医疗建议。品牌资料持续更新中，欢迎品牌方通过邮箱提供准确资料。</span>
+      </div>
+      <div class="brand-grid" id="brandList">
+        <article class="brand-card" data-name="百花" data-tag="中华老字号" data-region="北京" data-desc="永丰蜜店 老牌蜂业">
+          <div class="pic"><img src="assets/brand-baihua.jpg" alt="百花 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>百花</h3><span class="tag">中华老字号</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>北京</div>
+            <p>历史可追溯至清道光年间创办的永丰蜜店，集科研、生产、销售于一体的老牌蜂业企业。</p>
+            <div class="foot"><a href="https://www.baihua1919.cn" target="_blank" rel="noopener noreferrer">官方渠道 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a><span class="src">品牌官网</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="冠生园" data-tag="中华老字号" data-region="上海" data-desc="百年食品 鲜蜂皇浆">
+          <div class="pic noimg"><span class="nm">冠</span><span class="tg">冠生园 · 蜂王浆</span></div>
+          <div class="body">
+            <div class="row1"><h3>冠生园</h3><span class="tag">中华老字号</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>上海</div>
+            <p>百年食品品牌，旗下鲜蜂皇浆产品线成熟，电商与商超渠道覆盖广。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="汪氏" data-tag="知名品牌" data-region="江西南昌" data-desc="始于1965 连锁加盟">
+          <div class="pic"><img src="assets/brand-wangshi.jpg" alt="汪氏 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>汪氏</h3><span class="tag">知名品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>江西南昌</div>
+            <p>始于 1965 年的老牌蜂产品企业，曾首创连锁加盟模式，服务人口过亿。</p>
+            <div class="foot"><a href="http://www.wsbee.com" target="_blank" rel="noopener noreferrer">官方渠道 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a><span class="src">品牌官网</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="老山" data-tag="知名品牌" data-region="江苏南京" data-desc="老山药业 蜂产品">
+          <div class="pic noimg"><span class="nm">老</span><span class="tg">老山 · 蜂王浆</span></div>
+          <div class="body">
+            <div class="row1"><h3>老山</h3><span class="tag">知名品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>江苏南京</div>
+            <p>老山药业旗下蜂产品品牌，江苏地区知名蜂产品企业。</p>
+            <div class="foot"><span class="src">公开资料</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="北大荒" data-tag="产区品牌" data-region="黑龙江" data-desc="黑蜂蜂王浆 黑土地">
+          <div class="pic"><img src="assets/brand-beidahuang.jpg" alt="北大荒 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>北大荒</h3><span class="tag">产区品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>黑龙江</div>
+            <p>依托黑土地优质蜜源的黑蜂蜂王浆，主打高蛋白、高活性。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="知蜂堂" data-tag="知名品牌" data-region="北京" data-desc="1999年 大型蜂企">
+          <div class="pic noimg"><span class="nm">知</span><span class="tg">知蜂堂 · 蜂王浆</span></div>
+          <div class="body">
+            <div class="row1"><h3>知蜂堂</h3><span class="tag">知名品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>北京</div>
+            <p>1999 年成立的大型蜂产品企业，覆盖蜂王浆、蜂胶、蜂蜜等全系产品。</p>
+            <div class="foot"><a href="http://www.zhifengtang.com" target="_blank" rel="noopener noreferrer">官方渠道 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a><span class="src">品牌官网</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="宝生园" data-tag="知名品牌" data-region="广东广州" data-desc="广州老牌 保健食品批文">
+          <div class="pic"><img src="assets/brand-baoshengyuan.jpg" alt="宝生园 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>宝生园</h3><span class="tag">知名品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>广东广州</div>
+            <p>广州老牌蜂产品企业，鲜蜂王浆持有保健食品批文，渠道以华南为主。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="宝利" data-tag="产区品牌" data-region="吉林延边" data-desc="延边宝利祥 长白山蜜源">
+          <div class="pic"><img src="assets/brand-baoli.jpg" alt="宝利 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>宝利</h3><span class="tag">产区品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>吉林延边</div>
+            <p>延边宝利祥蜂业出品，立足长白山区蜜源，产品线覆盖鲜浆与冻干粉。</p>
+            <div class="foot"><a href="http://www.blx-bee.com" target="_blank" rel="noopener noreferrer">官方渠道 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a><span class="src">品牌官网</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="蜜之珍" data-tag="新锐品牌" data-region="陕西秦岭" data-desc="秦岭产区 高王浆酸">
+          <div class="pic noimg"><span class="nm">蜜</span><span class="tg">蜜之珍 · 蜂王浆</span></div>
+          <div class="body">
+            <div class="row1"><h3>蜜之珍</h3><span class="tag">新锐品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>陕西秦岭</div>
+            <p>主打秦岭产区高王浆酸鲜浆，电商渠道热门的蜂王浆新锐品牌。</p>
+            <div class="foot"><span class="src">公开资料</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="恋之坊" data-tag="新锐品牌" data-region="—" data-desc="电商热销 鲜浆小包装">
+          <div class="pic noimg"><span class="nm">恋</span><span class="tg">恋之坊 · 蜂王浆</span></div>
+          <div class="body">
+            <div class="row1"><h3>恋之坊</h3><span class="tag">新锐品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>—</div>
+            <p>电商渠道热门蜂王浆品牌，以鲜浆小包装为主，主打年轻消费群体。</p>
+            <div class="foot"><span class="src">公开资料</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="蜂之语" data-tag="新锐品牌" data-region="—" data-desc="电商在售 小罐装">
+          <div class="pic"><img src="assets/brand-fengzhiyu.jpg" alt="蜂之语 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>蜂之语</h3><span class="tag">新锐品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>—</div>
+            <p>电商在售蜂王浆品牌，鲜浆小罐装，主打便捷与性价比。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+        <article class="brand-card" data-name="志源堂" data-tag="产区品牌" data-region="湖北" data-desc="蜂场直销 产地直发">
+          <div class="pic"><img src="assets/brand-zhiyuantang.jpg" alt="志源堂 蜂王浆产品" loading="lazy" width="800" height="600"></div>
+          <div class="body">
+            <div class="row1"><h3>志源堂</h3><span class="tag">产区品牌</span></div>
+            <div class="region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>湖北</div>
+            <p>湖北蜂场直销模式品牌，强调产地直发与新鲜度，电商在售。</p>
+            <div class="foot"><span class="src">电商在售</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="empty" id="brandEmpty" hidden><b>没有找到匹配的品牌</b>换个关键词试试，或联系我们免费补充收录。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 视图：知识科普 ===== -->
+<section class="view" id="guide">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="kicker">GUIDE</div>
+      <h1>蜂王浆知识科普</h1>
+      <p>从认识、食用到保存、选购，用一篇把蜂王浆讲清楚。内容为公开资料整理，仅供参考。</p>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="wrap">
+      <div class="def">
+        <div>
+          <h3>什么是蜂王浆？</h3>
+          <p>蜂王浆又称蜂皇浆、蜂乳，是青年工蜂咽下腺和上颚腺分泌的浆状物质，主要用来饲喂蜂王和蜜蜂幼虫。它呈乳白色至淡黄色，带酸、辣、涩的独特口感，因营养集中而被称为「液体黄金」。蜂王终身以蜂王浆为食，寿命远长于普通工蜂，这也是蜂王浆备受关注的原因。</p>
+          <div class="rel">
+            <span>工蜂分泌</span>
+            <span>蜂王食物</span>
+            <span>浆状活性物</span>
+            <span>需冷冻保存</span>
+          </div>
+        </div>
+        <div class="def-fig">
+          <svg viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="110,18 182,64 182,156 110,202 38,156 38,64" fill="none"/>
+            <polygon points="110,46 156,75 156,145 110,174 64,145 64,75" fill="#EAD9B4"/>
+            <circle cx="110" cy="110" r="22" fill="#D9A441"/>
+            <path d="M60 60c-14 14-14 34 0 48" stroke="#B07B2E"/>
+            <path d="M160 60c14 14 14 34 0 48" stroke="#B07B2E"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="sec-sub">
+        <div class="sec-head" style="margin-bottom:22px">
+          <div class="kicker">NUTRITION</div>
+          <h2>主要营养成分</h2>
+        </div>
+        <div class="nutri">
+          <div class="n"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><b>王浆酸</b><i>10-羟基-2-癸烯酸</i></div>
+          <div class="n"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/><path d="M9 20v-6h6v6"/></svg></div><b>蛋白质</b><i>约占干物质四成以上</i></div>
+          <div class="n"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20"/><path d="M2 12h20"/><circle cx="12" cy="12" r="2"/></svg></div><b>氨基酸</b><i>含多种人体必需氨基酸</i></div>
+          <div class="n"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9Z"/></svg></div><b>维生素</b><i>B 族维生素等</i></div>
+          <div class="n"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M8 21h8"/><path d="M12 3a4 4 0 0 1 4 4c0 1.5-.8 2.5-2 3.2"/></svg></div><b>微量元素</b><i>铁、锌、硒等</i></div>
+          <div class="n"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><b>脂肪酸</b><i>多种活性脂肪酸</i></div>
+        </div>
+      </div>
+
+      <div class="sec-sub">
+        <div class="sec-head" style="margin-bottom:22px">
+          <div class="kicker">HOW TO EAT</div>
+          <h2>怎么吃更科学</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="no"><i>01</i></div><h4>舌下含服</h4><p>取一小勺置于舌下含化，让活性成分经口腔黏膜直接吸收，利用率最高。</p></div>
+          <div class="step"><div class="no"><i>02</i></div><h4>温水冲服</h4><p>用不超过 40℃ 的温开水送服，切忌开水冲泡，高温会破坏活性成分。</p></div>
+          <div class="step"><div class="no"><i>03</i></div><h4>搭配蜂蜜</h4><p>与蜂蜜约按 1:2 混合食用可中和酸辣口感，风味与接受度更好。</p></div>
+          <div class="step"><div class="no"><i>04</i></div><h4>用量有度</h4><p>一般每日 3～6 克，宜空腹服用，体弱者可在指导下加量，不宜贪多。</p></div>
+        </div>
+      </div>
+
+      <div class="sec-sub">
+        <div class="sec-head" style="margin-bottom:22px">
+          <div class="kicker">HOW TO STORE</div>
+          <h2>保存与选购要点</h2>
+        </div>
+        <div class="grid2">
+          <div class="kcard">
+            <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10h10"/><path d="M7 14h6"/><path d="M4 4h16v16H4z"/></svg></span>保存方法</h3>
+            <ul class="klist">
+              <li><span class="k">冷冻存放</span><span class="v">新鲜蜂王浆须 -18℃ 冷冻保存，短期可冷藏</span></li>
+              <li><span class="k">避光密闭</span><span class="v">光与空气会使活性成分降解，用后盖紧</span></li>
+              <li><span class="k">尽快食用</span><span class="v">开封后尽快吃完，避免反复冻融</span></li>
+              <li><span class="k">看准效期</span><span class="v">关注生产日期与保质期，优选当季新浆</span></li>
+            </ul>
+          </div>
+          <div class="kcard">
+            <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6"/><path d="M11 8v6"/></svg></span>选购要点</h3>
+            <ul class="klist">
+              <li><span class="k">看配料表</span><span class="v">鲜蜂王浆配料应只有蜂王浆，无勾兑添加</span></li>
+              <li><span class="k">看王浆酸</span><span class="v">关注产品标注的王浆酸（10-HDA）含量</span></li>
+              <li><span class="k">看冷链</span><span class="v">鲜王浆全程冷链运输，到手仍是冷冻状态</span></li>
+              <li><span class="k">看渠道</span><span class="v">选正规品牌、旗舰店或资质齐全的蜂场</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="warn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.7 18-8-14a2 2 0 0 0-3.4 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <div><b>注意事项</b><p>蜂王浆并非人人适合：过敏体质、哮喘、孕期及有特定疾病者应先咨询医生；保健食品不是药物，不能代替药物治疗疾病。本页信息仅为公开资料整理，不构成医疗建议。</p></div>
+        </div>
+        <p class="disc">信息来源：品牌官网、公开新闻报道、电商平台商品信息及行业资料，发布于 2026 年 10 月。信息如有出入，以官方发布为准。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 视图：商家入驻 ===== -->
+<section class="view" id="join">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="kicker">JOIN US</div>
+      <h1>商家入驻蜂王浆.cn</h1>
+      <p>面向蜂王浆品牌方、经销商、蜂场与原料商开放收录，免费入驻、长期展示。</p>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="wrap">
+      <div class="join-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+        <h2>入驻联系方式</h2>
+        <p>将品牌资料整理后发送邮件，我们会在 3 个工作日内完成审核并收录到黄页。</p>
+        <div class="mailbox">
+          <span class="mail">mfujun@agent.qq.com</span>
+          <span class="act">
+            <button id="copyMail" type="button">复制邮箱</button>
+            <a class="ghost" href="mailto:mfujun@agent.qq.com?subject=蜂王浆.cn%20品牌入驻申请" style="border-radius:9px;font-size:13.5px;font-weight:600;padding:9px 15px;background:transparent;border:1px solid var(--amber);color:var(--amber-deep);display:inline-flex;align-items:center">发邮件</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="join-steps">
+        <div class="join-step"><div class="no">01</div><h4>整理资料</h4><p>准备品牌名称、Logo、产地、简介、主打产品与官方联系方式。</p></div>
+        <div class="join-step"><div class="no">02</div><h4>发送邮件</h4><p>将资料发送至 mfujun@agent.qq.com，标题注明「品牌入驻」。</p></div>
+        <div class="join-step"><div class="no">03</div><h4>审核收录</h4><p>审核通过后录入黄页并上线展示，后续可更新品牌信息。</p></div>
+      </div>
+
+      <div class="faq">
+        <h3>常见问题</h3>
+        <details class="faq-item"><summary>入驻收费吗？<span class="plus">+</span></summary><div class="ans">目前品牌与商家收录完全免费。站点后期可能提供推广位等增值服务，届时会提前说明并征得同意。</div></details>
+        <details class="faq-item"><summary>哪些主体可以入驻？<span class="plus">+</span></summary><div class="ans">正规蜂王浆品牌方、经销商、养蜂合作社、蜂场及原料供应商均可申请。需提供可核验的经营资质或公开渠道信息。</div></details>
+        <details class="faq-item"><summary>审核要多久？收录后能更新吗？<span class="plus">+</span></summary><div class="ans">通常在 3 个工作日内完成审核。收录后如需修改品牌信息，再次发邮件说明即可，我们会在下个更新周期同步。</div></details>
+        <details class="faq-item"><summary>我能申请删除或暂停收录吗？<span class="plus">+</span></summary><div class="ans">可以。发邮件提出申请，我们会在确认后尽快下线相关品牌信息。</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="col">
+      <div class="brand">蜂王浆<span class="dot">.cn</span></div>
+      <p class="desc">全国蜂王浆品牌与商家信息黄页，专注蜂王浆行业品牌索引与知识科普。数据整理自公开资料，仅供参考。</p>
+      <a class="mail" href="mailto:mfujun@agent.qq.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        mfujun@agent.qq.com
+      </a>
+    </div>
+    <div class="col">
+      <h4>站内导航</h4>
+      <a href="#home" data-nav="home">首页</a>
+      <a href="#brands" data-nav="brands">品牌黄页</a>
+      <a href="#guide" data-nav="guide">知识科普</a>
+      <a href="#join" data-nav="join">商家入驻</a>
+    </div>
+    <div class="col">
+      <h4>内容板块</h4>
+      <a href="#brands">品牌名录</a>
+      <a href="#guide">选购指南</a>
+      <a href="#guide">食用方法</a>
+      <a href="#join">免费入驻</a>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="wrap">
+      蜂王浆.cn · 蜂王浆行业信息黄页 | 联系邮箱：mfujun@agent.qq.com<br>
+      免责声明：本站为信息展示平台，收录的品牌资料整理自公开网络信息，不构成任何购买建议或医疗建议；保健食品不是药物，不能代替药物治疗疾病。如信息有误，请联系更正。
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== 品牌筛选（品牌数据为静态 HTML，见 #brandList） ===== */
+const CHIPS = ["全部","中华老字号","知名品牌","产区品牌","新锐品牌"];
+
+const state = { route:"home", q:"", chip:"全部" };
+
+/* ===== 视图路由 ===== */
+function navigate(){
+  const h = location.hash.replace("#","") || "home";
+  const views = ["home","brands","guide","join"];
+  state.route = views.includes(h) ? h : "home";
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+  const el = document.getElementById(state.route);
+  if(el) el.classList.add("active");
+  document.querySelectorAll("[data-nav]").forEach(a=>{
+    a.classList.toggle("on", a.getAttribute("data-nav")===state.route);
+  });
+  window.scrollTo({top:0, behavior:"auto"});
+  if(state.route==="brands") renderBrandList();
+}
+window.addEventListener("hashchange", navigate);
+
+/* ===== 品牌筛选渲染 ===== */
+function renderBrandList(){
+  const q = state.q.trim().toLowerCase();
+  const cards = document.querySelectorAll("#brandList .brand-card");
+  let shown = 0;
+  cards.forEach(c=>{
+    const okChip = state.chip==="全部" || c.getAttribute("data-tag")===state.chip;
+    const hay = (c.getAttribute("data-name")+c.getAttribute("data-region")+c.getAttribute("data-tag")+c.getAttribute("data-desc")).toLowerCase();
+    const okQ = !q || hay.indexOf(q)>=0;
+    const show = okChip && okQ;
+    c.hidden = !show;
+    if(show) shown++;
+  });
+  document.getElementById("brandEmpty").hidden = shown>0;
+}
+
+/* ===== 品牌页筛选 ===== */
+document.getElementById("brandChips").innerHTML = CHIPS.map(c=>'<button type="button" class="chip'+(c===state.chip?" on":"")+'" data-chip="'+c+'">'+c+'</button>').join("");
+document.getElementById("brandChips").addEventListener("click", e=>{
+  const chip = e.target.closest(".chip");
+  if(!chip) return;
+  state.chip = chip.getAttribute("data-chip");
+  document.querySelectorAll("#brandChips .chip").forEach(c=>c.classList.toggle("on", c===chip));
+  renderBrandList();
+});
+document.getElementById("brandSearch").addEventListener("input", e=>{
+  state.q = e.target.value;
+  renderBrandList();
+});
+
+/* ===== 首页搜索与热词 ===== */
+document.getElementById("homeSearch").addEventListener("submit", e=>{
+  e.preventDefault();
+  const v = document.getElementById("homeSearchInput").value.trim();
+  if(!v) return;
+  location.hash = "#brands";
+  setTimeout(()=>{
+    state.q = v;
+    document.getElementById("brandSearch").value = v;
+    renderBrandList();
+  },30);
+});
+document.querySelectorAll(".hero-tags span").forEach(s=>{
+  s.addEventListener("click", ()=>{
+    location.hash = "#brands";
+    setTimeout(()=>{
+      state.q = s.getAttribute("data-tag");
+      document.getElementById("brandSearch").value = state.q;
+      renderBrandList();
+    },30);
+  });
+});
+
+/* ===== 复制邮箱 ===== */
+const toastEl = (()=>{ const d=document.createElement("div"); d.id="toast"; document.body.appendChild(d); return d; })();
+function toast(msg){
+  toastEl.textContent = msg;
+  toastEl.className = "show";
+  clearTimeout(toastEl._t);
+  toastEl._t = setTimeout(()=>toastEl.className="",1800);
+}
+document.getElementById("copyMail").addEventListener("click", async ()=>{
+  const mail = "mfujun@agent.qq.com";
+  try{
+    await navigator.clipboard.writeText(mail);
+    toast("邮箱已复制：mfujun@agent.qq.com");
+  }catch(err){
+    const ta = document.createElement("textarea");
+    ta.value = mail;
+    ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand("copy"); toast("邮箱已复制：mfujun@agent.qq.com"); }
+    catch(e2){ toast("请手动复制邮箱：mfujun@agent.qq.com"); }
+    document.body.removeChild(ta);
+  }
+});
+
+/* ===== toast 样式（内联注入） ===== */
+const s = document.createElement("style");
+s.textContent = '#toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(16px);background:#2A1F11;color:#F6EBCF;font-size:13.5px;padding:11px 20px;border-radius:11px;opacity:0;pointer-events:none;transition:.25s;z-index:99;box-shadow:0 10px 30px rgba(0,0,0,.3)}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}';
+document.head.appendChild(s);
+
+navigate();
+</script>
+</body>
+</html>
