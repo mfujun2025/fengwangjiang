@@ -147,6 +147,16 @@ button{font-family:inherit;cursor:pointer}
 .about-item p{font-size:13.5px;color:var(--muted)}
 @media(max-width:760px){.about-grid{grid-template-columns:1fr}}
 
+/* 资讯卡片 */
+.news-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.news-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:8px;transition:.2s;position:relative}
+.news-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(176,123,46,.5)}
+.news-card .ntag{font-size:11.5px;font-weight:700;letter-spacing:.12em;color:var(--amber-deep);background:var(--bg-2);border:1px solid var(--line);padding:3px 10px;border-radius:99px;align-self:flex-start}
+.news-card h3{font-family:var(--serif);font-size:19px;font-weight:900;line-height:1.45}
+.news-card p{font-size:13.5px;color:var(--muted)}
+.news-card .ndate{font-size:12.5px;color:#A2937C;margin-top:6px}
+.news-card .ndate::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--amber-2);margin-right:8px;vertical-align:2px}
+
 /* CTA 条 */
 .cta{background:linear-gradient(135deg,var(--dark) 0%,#3A2A10 100%);color:#F6EBCF;border-radius:20px;padding:38px 40px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
 .cta h3{font-family:var(--serif);font-size:22px;font-weight:900}
@@ -279,6 +289,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       <a href="#home" data-nav="home">首页</a>
       <a href="#brands" data-nav="brands">品牌黄页</a>
       <a href="#guide" data-nav="guide">知识科普</a>
+      <a href="#news" data-nav="news">资讯</a>
       <a href="#join" data-nav="join">商家入驻</a>
     </nav>
     <a class="top-mail" href="mailto:mfujun@agent.qq.com">
@@ -413,6 +424,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
         </article>
       </div>
       <p style="margin-top:20px"><a href="#brands" style="font-weight:600;color:var(--amber)">查看全部品牌 →</a></p>
+    </div>
+  </div>
+
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">NEWS</div>
+        <h2>蜂王浆资讯</h2>
+        <p>行业动态、产地行情与选购信息，持续更新。</p>
+      </div>
+      <div class="news-grid" id="homeNews">
+        <a class="news-card" href="news/fengwangjiang-qiujiang-hangqing-2026.html">
+          <span class="ntag">行业资讯</span>
+          <h3>2026 年蜂王浆秋浆上市：产地行情与选购参考</h3>
+          <p>全国均价 94 元/斤，各产区报价差在哪？选购守住三条底线，附权威消费提示。</p>
+          <span class="ndate">2026-10-12</span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -733,6 +762,29 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
   </div>
 </section>
 
+<!-- ===== 视图：资讯 ===== -->
+<section class="view" id="news">
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="kicker">NEWS</div>
+      <h1>蜂王浆资讯</h1>
+      <p>蜂王浆行业动态、产地行情、市场趋势与选购信息，持续更新。</p>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="wrap">
+      <div class="news-grid" id="newsList">
+        <a class="news-card" href="news/fengwangjiang-qiujiang-hangqing-2026.html">
+          <span class="ntag">行业资讯</span>
+          <h3>2026 年蜂王浆秋浆上市：产地行情与选购参考</h3>
+          <p>每年 9—10 月是蜂王浆秋浆采收上市期。今年秋浆行情如何？全国均价 94 元/斤，各产区报价差在哪？影响价格的关键因素有哪些？本文结合 2026 年 10 月产地行情与权威消费提示，整理成一份可参考的蜂王浆资讯，选购记得守住王浆酸、配料与冷链三条底线。</p>
+          <span class="ndate">2026-10-12</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
   <div class="footer-in">
@@ -749,6 +801,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       <a href="#home" data-nav="home">首页</a>
       <a href="#brands" data-nav="brands">品牌黄页</a>
       <a href="#guide" data-nav="guide">知识科普</a>
+      <a href="#news" data-nav="news">资讯</a>
       <a href="#join" data-nav="join">商家入驻</a>
     </div>
     <div class="col">
@@ -776,7 +829,7 @@ const state = { route:"home", q:"", chip:"全部" };
 /* ===== 视图路由 ===== */
 function navigate(){
   const h = location.hash.replace("#","") || "home";
-  const views = ["home","brands","guide","join"];
+  const views = ["home","brands","guide","join","news"];
   state.route = views.includes(h) ? h : "home";
   document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
   const el = document.getElementById(state.route);
